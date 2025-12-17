@@ -89,6 +89,19 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4)  RC(2,5) RC(2,6) RC(2,7) RC(2,8) RC(2,9)
             , <&key_physical_attrs 100 100  850  312       0     0     0>
         ;
     };
+
+    position_map {
+		compatible = "zmk,physical-layout-position-map";
+		complete;
+
+        default {
+            physical-layout = <&chocofi_temper_layout>;
+            positions
+                = <36  0  1  2  3  4  5  6  7  8  9 37>
+                , <38 10 11 12 13 14 15 16 17 18 19 39>
+                , <40 20 21 22 23 24 25 26 27 28 29 41>
+                , <         30 31 32 33 34 35         >;
+        }
 };
 
 &pro_micro_i2c {
