@@ -17,7 +17,7 @@
 #define NUM 4
 #define NUM_1h 5
 #define NAV 6
-#define NAV 7
+#define NAV_1h 7
 #define FUN 8
 #define FUN_1h 9
 #define RAISE 10
@@ -214,7 +214,7 @@
                 fun_layer {
                         bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &tog HNSD     &kp K_MUTE    &kp C_VOL_DN  &kp C_VOL_DN  &out OUT_USB      &out OUT_BLE  &kp C_VOL_UP     &kp F8        &kp F9       &kp F12
+        &trans     &kp K_MUTE    &kp K_VOL_DN  &kp K_VOL_DN  &out OUT_USB      &out OUT_BLE  &kp K_VOL_UP     &kp F8        &kp F9       &kp F12
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4         &trans        &kp F4        &kp F5        &kp F6       &kp F11
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
