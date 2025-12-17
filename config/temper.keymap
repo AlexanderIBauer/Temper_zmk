@@ -131,138 +131,81 @@
     };
 
     keymap {
-                compatible = "zmk,keymap";
+        compatible = "zmk,keymap";
 
-                default_layer {
-                        bindings = <
-// ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-        &kp Q         &kp W         &kp E         &kp R         &kp T              &kp Y        &kp U         &kp I         &kp O         &kp P   
-// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        &kp A         &kp S         &kp D         &kp F         &kp G              &kp H        &kp J         &kp K         &kp L       &kp SEMI
-// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        &kp Z         &kp X         &kp C         &kp V         &kp B              &kp N        &kp M       &kp COMMA      &kp DOT      &kp FSLH
-// ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                &studio_unlock  &mo RAISE      &kp SPACE         &kp SPACE     &mo RAISE      &none
-//                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
-                        >;
-                };
-
-
-                default_1h {
-                    status = "reserved";
-                };
-
-
-                handsdown_neu {
-                        bindings = <
-// ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-        &kp W         &kp F         &kp M         &kp P         &kp V             &kp FSLH      &kp DOT       &kp Q         &kp DQT       &kp APOS   
-// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        &kp R         &kp S         &kp N         &kp T         &kp B          &comma_semi      &kp A         &kp E         &kp I         &kp H
-// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        &kp X         &kp C         &kp L         &kp D         &kp G           &kp MINUS       &kp U         &kp O         &kp Y         &kp K
-// ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                    &trans        &trans        &trans            &kp N0        &trans        &trans
-//                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
-                        >;
-                };
-
-
-                handsdown_1h {
-                    status = "reserved";
-                };
-
-
-                num_layer {
-                        bindings = <
-// ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-      &kp TILDE       &kp AT       &kp LBRC      &kp RBRC     &kp PRCNT          &kp STAR       &kp N7        &kp N8        &kp N9      &kp MINUS
-// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-      &kp CARET      &kp HASH      &kp LPAR      &kp RPAR      &kp DLLR         &kp UNDER       &kp N4        &kp N5        &kp N6      &kp PLUS
-// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-      &amps_morph     &kp LT       &kp LBKT      &kp RBKT       &kp GT          &slh_morph      &kp N1        &kp N2        &kp N3      &kp EQUAL
-// ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                    &trans        &trans        &trans            &kp N0        &trans        &trans
-//                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
-                        >;
-                };
-
-                num_1h {
-                    status = "reserved";
-                };
-
-                nav_layer {
-                        bindings = <
-// ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-        &none         &none         &kp UP        &none         &none             &none         &none       &kp PG_UP       &none         &none
-// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        &none        &kp LEFT     &kp DOWN       &kp RGHT       &none             &none       &kp HOME      &kp PG_DN      &kp END        &none
-// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        &to 1         &to 2         &to 3         &to 4         &to 5             &to 6         &to 7         &to 0         &to 0         &to 0
-// ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                    &none         &none         &none             &none         &none         &none
-//                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
-                        >;
-                };
-
-
-                nav_1h {
-                    status = "reserved";
-                };
-
-
-                fun_layer {
-                        bindings = <
-// ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-        &trans     &kp K_MUTE    &kp K_VOL_DN  &kp K_VOL_DN  &out OUT_USB      &out OUT_BLE  &kp K_VOL_UP     &kp F8        &kp F9       &kp F12
-// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4         &trans        &kp F4        &kp F5        &kp F6       &kp F11
-// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-      &bt BT_CLR    &kp C_PREV     &kp C_PP     &kp C_NEXT      &trans            &trans        &kp F1        &kp F2        &kp F3       &kp F10
-// ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                    &trans        &trans        &trans            &trans        &trans        &trans
-//                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
-                        >;
-                };
-
-
-                fun_1h {
-                    status = "reserved";
-                };
-
-
-                raise {
-                        bindings = <
-// ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-        &kp N1        &kp N2        &kp N3        &kp N4       &kp N5            &kp N6        &kp N7         &kp N8        &kp N9       &kp N0
-// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-       &kp TAB      &kp LBKT      &kp LBRC      &kp LPAR       &kp LT            &kp GT       &kp RPAR       &kp RBRC      &kp RBKT      &kp APOS
-// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        &kp F1        &kp F2        &kp F3        &kp F4       &kp F5            &kp F6        &kp F7         &kp F8        &kp F9       &kp F10
-// ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                    &kp F12       &kp BSPC     &kp N0            &kp N0        &kp DEL        &kp F11
-//                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
-                        >;
-                };
-
-
-                raise_1h {
-                    status = "reserved";
-                };
-
-
-                empty {
-                        bindings = <
-// ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-        &none         &none         &none         &none         &none             &none         &none         &none         &none         &none
-// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        &none         &none         &none         &none         &none             &none         &none         &none         &none         &none
-// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        &none         &none         &none         &none         &none             &none         &none         &none         &none         &none
-// ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                    &none         &none         &none             &none         &none         &none
-//                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
-                        >;
-                };
+        default_layer {
+            bindings = <
+  &kp Q  &kp W  &kp E           &kp R      &kp T     &kp Y   &kp U      &kp I      &kp O    &kp P
+  &kp A  &kp S  &kp D           &kp F      &kp G     &kp H   &kp J      &kp K      &kp L    &kp SEMI
+  &kp Z  &kp X  &kp C           &kp V      &kp B     &kp N   &kp M      &kp COMMA  &kp DOT  &kp FSLH
+                &studio_unlock  &kp SPACE  &mo 10    &mo 10  &kp SPACE  &none
+            >;
         };
+
+        default_1h { status = "reserved"; };
+
+        handsdown_neu {
+            bindings = <
+  &kp W  &kp F  &kp M   &kp P   &kp V     &kp FSLH   &kp DOT  &kp Q   &kp DQT  &kp APOS
+  &kp R  &kp S  &kp N   &kp T   &kp B     &kp COMMA  &kp A    &kp E   &kp I    &kp H
+  &kp X  &kp C  &kp L   &kp D   &kp G     &kp MINUS  &kp U    &kp O   &kp Y    &kp K
+                &trans  &trans  &trans    &kp N0     &trans   &trans
+            >;
+        };
+
+        handsdown_1h { status = "reserved"; };
+
+        num_layer {
+            bindings = <
+  &kp TILDE      &kp AT    &kp LBRC  &kp RBRC  &kp PRCNT    &kp STAR             &kp N7  &kp N8  &kp N9  &kp MINUS
+  &kp CARET      &kp HASH  &kp LPAR  &kp RPAR  &kp DLLR     &kp UNDER            &kp N4  &kp N5  &kp N6  &kp PLUS
+  &mt PIPE AMPS  &kp LT    &kp LBKT  &kp RBKT  &kp GT       &mt BACKSLASH SLASH  &kp N1  &kp N2  &kp N3  &kp EQUAL
+                           &trans    &trans    &trans       &kp N0               &trans  &trans
+            >;
+        };
+
+        num_1h { status = "reserved"; };
+
+        nav_layer {
+            bindings = <
+  &none  &none     &kp UP    &none      &none    &none  &none     &kp PG_UP  &none    &none
+  &none  &kp LEFT  &kp DOWN  &kp RIGHT  &none    &none  &kp HOME  &kp PG_DN  &kp END  &none
+  &to 1  &to 2     &to 3     &to 4      &to 5    &to 6  &to 7     &to 0      &to 0    &to 0
+                   &none     &none      &none    &none  &none     &none
+            >;
+        };
+
+        nav_1h { status = "reserved"; };
+
+        fun_layer {
+            bindings = <
+  &trans        &kp K_MUTE    &kp K_VOL_DN  &kp K_VOL_DN  &out OUT_USB    &out OUT_BLE  &kp K_VOL_UP  &kp F8  &kp F9  &kp F12
+  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans        &kp F4        &kp F5  &kp F6  &kp F11
+  &bt BT_CLR    &kp C_PREV    &kp C_PP      &kp C_NEXT    &trans          &trans        &kp F1        &kp F2  &kp F3  &kp F10
+                              &trans        &trans        &trans          &trans        &trans        &trans
+            >;
+        };
+
+        fun_1h { status = "reserved"; };
+
+        raise {
+            bindings = <
+  &kp N1   &kp N2    &kp N3    &kp N4    &kp N5    &kp N6  &kp N7    &kp N8    &kp N9    &kp N0
+  &kp TAB  &kp LBKT  &kp LBRC  &kp LPAR  &kp LT    &kp GT  &kp RPAR  &kp RBRC  &kp RBKT  &kp APOS
+  &kp F1   &kp F2    &kp F3    &kp F4    &kp F5    &kp F6  &kp F7    &kp F8    &kp F9    &kp F10
+                     &kp F12   &kp BSPC  &kp N0    &kp N0  &kp DEL   &kp F11
+            >;
+        };
+
+        raise_1h { status = "reserved"; };
+
+        empty {
+            bindings = <
+  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none
+  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none
+  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none
+                &none  &none  &none    &none  &none  &none
+            >;
+        };
+    };
 };
