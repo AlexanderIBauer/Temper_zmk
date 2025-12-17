@@ -5,6 +5,7 @@
  */
 
 #include <dt-bindings/zmk/matrix_transform.h>
+#include <physical_layouts.dtsi>
 
 / {
     chosen {
@@ -33,6 +34,7 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4)  RC(2,5) RC(2,6) RC(2,7) RC(2,8) RC(2,9)
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
         label = "KSCAN";
+        wakeup-source;
 
         diode-direction = "col2row";
         row-gpios
@@ -41,10 +43,52 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4)  RC(2,5) RC(2,6) RC(2,7) RC(2,8) RC(2,9)
             , <&pro_micro 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             , <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
-
     };
 
-    // TODO: per-key RGB node(s)?
+    &physical_layout0 {
+        display-name = "Chocofi Temper";
+        compatible = "zmk,physical-layout";
+        transform = <&default_transform>; // Label of the matrix transform this layout uses
+        kscan = <&kscan0>; // Label of the kscan node this layout uses
+
+        keys  //                     w   h    x    y     rot    rx    ry
+            = <&key_physical_attrs 100 100    0   95       0     0     0>
+            , <&key_physical_attrs 100 100  100   32       0     0     0>
+            , <&key_physical_attrs 100 100  200    0       0     0     0>
+            , <&key_physical_attrs 100 100  300   28       0     0     0>
+            , <&key_physical_attrs 100 100  400   42       0     0     0>
+            , <&key_physical_attrs 100 100  700   42       0     0     0>
+            , <&key_physical_attrs 100 100  800   28       0     0     0>
+            , <&key_physical_attrs 100 100  900    0       0     0     0>
+            , <&key_physical_attrs 100 100 1000   32       0     0     0>
+            , <&key_physical_attrs 100 100 1100   95       0     0     0>
+            , <&key_physical_attrs 100 100    0  195       0     0     0>
+            , <&key_physical_attrs 100 100  100  132       0     0     0>
+            , <&key_physical_attrs 100 100  200  100       0     0     0>
+            , <&key_physical_attrs 100 100  300  129       0     0     0>
+            , <&key_physical_attrs 100 100  400  142       0     0     0>
+            , <&key_physical_attrs 100 100  700  142       0     0     0>
+            , <&key_physical_attrs 100 100  800  129       0     0     0>
+            , <&key_physical_attrs 100 100  900  100       0     0     0>
+            , <&key_physical_attrs 100 100 1000  132       0     0     0>
+            , <&key_physical_attrs 100 100 1100  195       0     0     0>
+            , <&key_physical_attrs 100 100    0  295       0     0     0>
+            , <&key_physical_attrs 100 100  100  231       0     0     0>
+            , <&key_physical_attrs 100 100  200  200       0     0     0>
+            , <&key_physical_attrs 100 100  300  229       0     0     0>
+            , <&key_physical_attrs 100 100  400  242       0     0     0>
+            , <&key_physical_attrs 100 100  700  242       0     0     0>
+            , <&key_physical_attrs 100 100  800  229       0     0     0>
+            , <&key_physical_attrs 100 100  900  200       0     0     0>
+            , <&key_physical_attrs 100 100 1000  231       0     0     0>
+            , <&key_physical_attrs 100 100 1100  295       0     0     0>
+            , <&key_physical_attrs 100 100  350  312    1200   350   412>
+            , <&key_physical_attrs 100 150  448  283    2400   448   433>
+            , <&key_physical_attrs 100 150  652  283  (-2400)  752   433>
+            , <&key_physical_attrs 100 100  750  312  (-1200)  850   412>
+            , <&key_physical_attrs 100 100  850  312       0     0     0>
+        ;
+    };
 };
 
 &pro_micro_i2c {
