@@ -48,7 +48,6 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4)  RC(2,5) RC(2,6) RC(2,7) RC(2,8) RC(2,9)
         display-name = "Chocofi Temper";
         compatible = "zmk,physical-layout";
         transform = <&default_transform>; // Label of the matrix transform this layout uses
-        kscan = <&kscan0>; // Label of the kscan node this layout uses
 
         keys  //                     w   h    x    y     rot    rx    ry
             = <&key_physical_attrs 100 100    0   95       0     0     0>
@@ -96,10 +95,10 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4)  RC(2,5) RC(2,6) RC(2,7) RC(2,8) RC(2,9)
         default {
             physical-layout = <&chocofi_temper_layout>;
             positions
-                = <36  0  1  2  3  4  5  6  7  8  9 37>
-                , <38 10 11 12 13 14 15 16 17 18 19 39>
-                , <40 20 21 22 23 24 25 26 27 28 29 41>
-                , <         30 31 32 33 34 35         >;
+                = < 0  1  2  3  4  5  6  7  8  9>
+                , <10 11 12 13 14 15 16 17 18 19>
+                , <20 21 22 23 24 25 26 27 28 29>
+                , <      30 31 32 33 34 35      >;
         }
 };
 
