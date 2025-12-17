@@ -11,7 +11,7 @@
     chosen {
         zephyr,display = &oled;
         zmk,kscan = &kscan0;
-        zmk,physical-layout = &physical_layout0;
+        zmk,physical-layout = &chocofi_temper_layout;
     };
 
     default_transform: keymap_transform_0 {
