@@ -1,3 +1,5 @@
+#include <physical_layouts.dtsi>
+
 / {
     chocofi_temper_layout: chocofi_temper_layout {
         display-name = "Chocofi Temper";
