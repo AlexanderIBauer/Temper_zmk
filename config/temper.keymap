@@ -10,10 +10,18 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
-#define Base 0
-#define NAV_NUM 1
-#define SYM 2
-#define FUN 3
+#define DEFAULT 0
+#define DEFAULT_1h 0
+#define HNSD 2
+#define HNSD_1h 3
+#define NUM 4
+#define NUM_1h 5
+#define NAV 6
+#define NAV 7
+#define FUN 8
+#define FUN_1h 9
+#define RAISE 10
+#define RAISE_1h 11
 
 &sk { quick-release; };
 
