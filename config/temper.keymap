@@ -118,14 +118,12 @@
 
         default_layer {
             bindings = <
-  &kp Q             &kp W        &kp E           &kp R           &kp T     &kp Y   &kp U            &kp I            &kp O                &kp P
-  &hm LEFT_SHIFT A  &hm LCTRL S  &hm LEFT_ALT D  &hm LEFT_GUI F  &kp G     &kp H   &hm RIGHT_GUI J  &hm RIGHT_ALT J  &hm RIGHT_CONTROL K  &hm RIGHT_SHIFT SEMI
-  &kp Z             &kp X        &kp C           &kp V           &kp B     &kp N   &kp M            &kp COMMA        &kp DOT              &kp FSLH
-                                 &studio_unlock  &kp SPACE       &mo 10    &mo 10  &kp SPACE        &none
+  &kp Q             &kp W        &kp E           &kp R           &kp T    &kp Y  &kp U            &kp I            &kp O                &kp P
+  &hm LEFT_SHIFT A  &hm LCTRL S  &hm LEFT_ALT D  &hm LEFT_GUI F  &kp G    &kp H  &hm RIGHT_GUI J  &hm RIGHT_ALT J  &hm RIGHT_CONTROL K  &hm RIGHT_SHIFT SEMI
+  &kp Z             &kp X        &kp C           &kp V           &kp B    &kp N  &kp M            &kp COMMA        &kp DOT              &kp FSLH
+                                 &studio_unlock  &kp SPACE       &mo 5    &mo 5  &kp SPACE        &to 3
             >;
         };
-
-        default_1h { status = "reserved"; };
 
         handsdown_neu {
             bindings = <
@@ -136,8 +134,6 @@
             >;
         };
 
-        handsdown_1h { status = "reserved"; };
-
         num_layer {
             bindings = <
   &kp TILDE      &kp AT    &kp LBRC  &kp RBRC  &kp PRCNT    &kp STAR             &kp N7  &kp N8  &kp N9  &kp MINUS
@@ -147,18 +143,14 @@
             >;
         };
 
-        num_1h { status = "reserved"; };
-
         nav_layer {
             bindings = <
   &none  &none     &kp UP    &none      &none     &none   &none     &kp PG_UP  &none    &none
   &none  &kp LEFT  &kp DOWN  &kp RIGHT  &none     &none   &kp HOME  &kp PG_DN  &kp END  &none
-  &to 1  &to 2     &to 3     &to 4      &to 5     &to 6   &to 7     &to 0      &to 0    &to 0
+  &to 0  &to 1     &to 2     &to 3      &to 4     &to 5   &to 6     &to 0      &to 0    &to 0
                    &none     &none      &trans    &trans  &none     &none
             >;
         };
-
-        nav_1h { status = "reserved"; };
 
         fun_layer {
             bindings = <
@@ -169,8 +161,6 @@
             >;
         };
 
-        fun_1h { status = "reserved"; };
-
         raise {
             bindings = <
   &kp N1   &kp N2    &kp N3    &kp N4    &kp N5    &kp N6  &kp N7    &kp N8    &kp N9    &kp N0
@@ -179,8 +169,6 @@
                      &kp F12   &kp BSPC  &trans    &trans  &kp DEL   &kp F11
             >;
         };
-
-        raise_1h { status = "reserved"; };
 
         empty {
             bindings = <
