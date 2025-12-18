@@ -100,21 +100,38 @@
         dash {
             bindings = <&kp MINUS>;
             key-positions = <8 7>;
+            layers = <0>;
         };
 
         equals {
             bindings = <&kp EQUAL>;
             key-positions = <9 8>;
+            layers = <0>;
         };
 
         grave {
             bindings = <&kp GRAVE>;
             key-positions = <1 2>;
+            layers = <0>;
         };
 
         reset_layers {
             bindings = <&to 0>;
             key-positions = <0 9>;
+        };
+
+        dot {
+            bindings = <&kp DOT>;
+            key-positions = <28 27>;
+            layers = <0 3 5>;
+        };
+
+        nav_jump {
+            bindings = <&mo 3>;
+            key-positions = <32 33>;
+            layers = <0 1>;
+            slow-release;
+            timeout-ms = <0>;
         };
     };
 
