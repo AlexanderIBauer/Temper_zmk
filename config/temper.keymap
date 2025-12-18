@@ -119,7 +119,7 @@
         default_layer {
             bindings = <
   &kp Q             &kp W        &kp E           &kp R           &kp T    &kp Y  &kp U            &kp I            &kp O                &kp P
-  &hm LEFT_SHIFT A  &hm LCTRL S  &hm LEFT_ALT D  &hm LEFT_GUI F  &kp G    &kp H  &hm RIGHT_GUI J  &hm RIGHT_ALT J  &hm RIGHT_CONTROL K  &hm RIGHT_SHIFT SEMI
+  &hm LEFT_SHIFT A  &hm LCTRL S  &hm LEFT_ALT D  &hm LEFT_GUI F  &kp G    &kp H  &hm RIGHT_GUI J  &hm RIGHT_ALT K  &hm RIGHT_CONTROL L  &hm RIGHT_SHIFT SEMI
   &kp Z             &kp X        &kp C           &kp V           &kp B    &kp N  &kp M            &kp COMMA        &kp DOT              &kp FSLH
                                  &studio_unlock  &kp SPACE       &mo 5    &mo 5  &kp SPACE        &to 3
             >;
