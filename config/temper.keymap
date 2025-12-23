@@ -198,6 +198,18 @@
             slow-release;
             layers = <0 1>;
         };
+
+        lh_mute {
+            bindings = <&kp C_MUTE>;
+            key-positions = <2 22>;
+            layers = <4>;
+        };
+
+        rh_mute {
+            bindings = <&kp C_MUTE>;
+            key-positions = <7 27>;
+            layers = <4>;
+        };
     };
 
     keymap {
