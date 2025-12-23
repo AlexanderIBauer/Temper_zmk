@@ -97,22 +97,22 @@
             key-positions = <1 0>;
         };
 
-        dash {
+        rh-dash {
             bindings = <&kp MINUS>;
             key-positions = <8 7>;
-            layers = <0>;
+            layers = <0 1 5>;
         };
 
         equals {
             bindings = <&kp EQUAL>;
             key-positions = <9 8>;
-            layers = <0>;
+            layers = <0 1 5>;
         };
 
-        grave {
-            bindings = <&kp GRAVE>;
+        lh-dash {
+            bindings = <&kp MINUS>;
             key-positions = <1 2>;
-            layers = <0>;
+            layers = <0 1 5>;
         };
 
         reset_layers {
