@@ -234,17 +234,17 @@
             bindings = <
   &none  &none     &kp UP    &none      &none     &none   &none     &kp PG_UP  &none    &none
   &none  &kp LEFT  &kp DOWN  &kp RIGHT  &none     &none   &kp HOME  &kp PG_DN  &kp END  &none
-  &to 0  &to 1     &to 2     &to 3      &to 4     &to 5   &to 6     &to 0      &to 0    &to 0
+  &to 0  &to 1     &to 2     &to 3      &to 4     &to 5   &to 0     &to 0      &to 0    &to 0
                    &none     &none      &trans    &trans  &none     &trans
             >;
         };
 
         media {
             bindings = <
-  &trans        &kp K_MUTE    &kp K_VOL_DN  &kp K_VOL_DN  &out OUT_USB    &out OUT_BLE  &kp K_VOL_UP  &kp F8       &kp F9  &kp F12
-  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans        &kp F4        &kp F5       &kp F6  &kp F11
-  &bt BT_CLR    &kp C_PREV    &kp C_PP      &kp C_NEXT    &trans          &trans        &kp F1        &kp F2       &kp F3  &kp F10
-                              &bootloader   &trans        &trans          &trans        &trans        &bootloader
+  &none      &kp K_MUTE  &kp K_VOL_DN  &kp K_VOL_DN  &kp SPACE    &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE
+  &kp SPACE  &kp SPACE   &kp SPACE     &kp SPACE     &kp SPACE    &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE
+  &kp SPACE  &kp SPACE   &kp SPACE     &kp SPACE     &kp SPACE    &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE
+                         &kp SPACE     &kp SPACE     &kp SPACE    &kp SPACE  &kp SPACE  &kp SPACE
             >;
         };
 
@@ -259,19 +259,19 @@
 
         fun {
             bindings = <
-  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none
-  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none
-  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none
-                &none  &none  &none    &none  &none  &none
+  &bt BT_CLR  &none  &none        &bt BT_NXT  &out OUT_TOG    &out OUT_TOG  &bt BT_NXT  &none        &none  &bt BT_CLR
+  &none       &none  &none        &none       &none           &none         &none       &none        &none  &none
+  &none       &none  &none        &none       &none           &none         &none       &none        &none  &none
+                     &bootloader  &none       &none           &none         &none       &bootloader
             >;
         };
 
         empty {
             bindings = <
-  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-                  &trans  &trans  &trans    &trans  &trans  &trans
+  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none
+  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none
+  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none
+                &none  &none  &none    &none  &none  &none
             >;
         };
     };
