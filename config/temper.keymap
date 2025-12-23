@@ -191,6 +191,13 @@
             key-positions = <6 17>;
             layers = <0 1 5>;
         };
+
+        nav_jump {
+            bindings = <&mo 3>;
+            key-positions = <32 33>;
+            slow-release;
+            layers = <0 1>;
+        };
     };
 
     keymap {
@@ -232,7 +239,7 @@
             >;
         };
 
-        fun {
+        media {
             bindings = <
   &trans        &kp K_MUTE    &kp K_VOL_DN  &kp K_VOL_DN  &out OUT_USB    &out OUT_BLE  &kp K_VOL_UP  &kp F8       &kp F9  &kp F12
   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans        &kp F4        &kp F5       &kp F6  &kp F11
@@ -247,6 +254,15 @@
   &kp TAB  &kp LBKT  &kp LBRC  &kp LPAR  &kp LT    &kp GT  &kp RPAR  &kp RBRC  &kp RBKT  &kp APOS
   &kp F1   &kp F2    &kp F3    &kp F4    &kp F5    &kp F6  &kp F7    &kp F8    &kp F9    &kp F10
                      &kp F12   &kp BSPC  &mo 3     &mo 3   &kp DEL   &kp F11
+            >;
+        };
+
+        fun {
+            bindings = <
+  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none
+  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none
+  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none
+                &none  &none  &none    &none  &none  &none
             >;
         };
 
