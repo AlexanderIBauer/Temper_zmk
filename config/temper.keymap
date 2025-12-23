@@ -120,12 +120,6 @@
             key-positions = <0 9>;
         };
 
-        dot {
-            bindings = <&kp DOT>;
-            key-positions = <28 27>;
-            layers = <0 3 5>;
-        };
-
         nav_jump {
             bindings = <&mo 3>;
             key-positions = <32 33>;
@@ -167,6 +161,42 @@
         lh-pipe {
             bindings = <&kp PIPE>;
             key-positions = <4 24>;
+            layers = <0 1 5>;
+        };
+
+        rh-forwardslash {
+            bindings = <&kp SLASH>;
+            key-positions = <17 26>;
+            layers = <0 1 5>;
+        };
+
+        lh-forwardslash {
+            bindings = <&kp SLASH>;
+            key-positions = <12 21>;
+            layers = <1 0 5>;
+        };
+
+        rh-backslash {
+            bindings = <&kp BACKSLASH>;
+            key-positions = <17 28>;
+            layers = <0 1 5>;
+        };
+
+        lh-backslash {
+            bindings = <&kp BACKSLASH>;
+            key-positions = <12 23>;
+            layers = <0 1 5>;
+        };
+
+        lh-grave {
+            bindings = <&kp GRAVE>;
+            key-positions = <1 12>;
+            layers = <0 1 5>;
+        };
+
+        rh-grave {
+            bindings = <&kp GRAVE>;
+            key-positions = <6 17>;
             layers = <0 1 5>;
         };
     };
