@@ -120,14 +120,6 @@
             key-positions = <0 9>;
         };
 
-        nav_jump {
-            bindings = <&mo 3>;
-            key-positions = <32 33>;
-            layers = <0 1>;
-            slow-release;
-            timeout-ms = <0>;
-        };
-
         rh-apos {
             bindings = <&kp APOS>;
             key-positions = <7 18>;
