@@ -246,7 +246,7 @@
             bindings = <
   &none  &none     &kp UP    &none      &none     &none   &none     &kp PG_UP  &none    &none
   &none  &kp LEFT  &kp DOWN  &kp RIGHT  &none     &none   &kp HOME  &kp PG_DN  &kp END  &none
-  &to 0  &to 1     &to 2     &to 3      &to 4     &to 5   &to 0     &to 0      &to 0    &to 0
+  &to 0  &to 1     &to 2     &to 3      &to 4     &to 5   &to 6     &to 0      &to 0    &to 0
                    &none     &none      &trans    &trans  &none     &trans
             >;
         };
