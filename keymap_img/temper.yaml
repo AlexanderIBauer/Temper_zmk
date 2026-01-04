@@ -22,7 +22,7 @@ layers:
     - {t: ',', s: <}
     - {t: ., s: '>'}
     - /
-  - - '&studio_unlock'
+  - - {t: nav, h: toggle}
     - SPACE
     - raise
     - raise
@@ -88,7 +88,7 @@ layers:
     - {t: default, h: toggle}
     - {t: default, h: toggle}
     - {t: default, h: toggle}
-  - - ''
+  - - {t: ▽, type: trans}
     - ''
     - {type: held}
     - {type: held}
@@ -102,7 +102,12 @@ layers:
       MUTE', VOL UP, '', '']
   - ['', PREV, PLAY PAUSE, NEXT, '', '', PREV, PP, NEXT, '']
   - ['', '', VOL DN, '', PRINTSCREEN, PRINTSCREEN, '', VOL DN, '', '']
-  - ['', '', '', '', '', '']
+  - - {t: ▽, type: trans}
+    - ''
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - ''
+    - {t: ▽, type: trans}
   raise:
   - ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
   - - ↹
@@ -125,8 +130,13 @@ layers:
   fun:
   - ['', '', BRI INC, BT NXT, OUT TOG, OUT TOG, BT NXT, BRI UP, '', '']
   - ['', '', BRI DEC, '', '', '', '', BRI DEC, '', '']
-  - [EP TOG, '', '', '', '', '', '', '', '', EP TOG]
-  - ['&bootloader', '', '', '', '', '&bootloader']
+  - [EP TOG, '', '', '', '&studio_unlock', '&studio_unlock', '', '', '', EP TOG]
+  - - {t: ▽, type: trans}
+    - '&bootloader'
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - '&bootloader'
+    - {t: ▽, type: trans}
   empty:
   - ['', '', '', '', '', '', '', '', '', '']
   - ['', '', '', '', '', '', '', '', '', '']
