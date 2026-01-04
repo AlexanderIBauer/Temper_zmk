@@ -1,45 +1,17 @@
 layout: {zmk_keyboard: temper}
 layers:
   default:
-  - - Q
-    - W
-    - F
-    - P
-    - B
-    - J
-    - L
-    - U
-    - Y
-    - {t: '''', s: '"'}
-  - [A, R, S, T, G, M, N, E, I, O]
-  - - Z
-    - X
-    - C
-    - D
-    - V
-    - K
-    - H
-    - {t: ',', s: ;}
-    - {t: ., s: ':'}
-    - {t: '?', s: '!'}
-  - - ⌘
-    - num
-    - {t: ⇧, s: ⇪}
-    - SPACE
-    - nav
-    - {t: BACKSPACE, s: Alt+BACKSPACE}
-  qwerty:
   - [Q, W, E, R, T, Y, U, I, O, P]
-  - - A
-    - S
-    - D
-    - F
+  - - {t: A, h: LEFT SHIFT}
+    - {t: S, h: ⌃}
+    - {t: D, h: ⎇}
+    - {t: F, h: ⌘}
     - G
     - H
-    - J
-    - K
-    - L
-    - {t: ;, s: ':'}
+    - {t: J, h: ⌘}
+    - {t: K, h: ⎇}
+    - {t: L, h: ⌃}
+    - {t: ;, h: RIGHT SHIFT, s: ':'}
   - - Z
     - X
     - C
@@ -50,111 +22,181 @@ layers:
     - {t: ',', s: <}
     - {t: ., s: '>'}
     - /
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  num:
-  - - '~'
-    - '@'
-    - '{'
-    - '}'
-    - '%'
-    - '*'
-    - '7'
-    - '8'
-    - '9'
+  - - '&studio_unlock'
+    - SPACE
+    - raise
+    - raise
+    - SPACE
+    - {t: nav, h: toggle}
+  handsdown_neu:
+  - - W
+    - F
+    - M
+    - P
+    - V
+    - /
+    - {t: ., s: '>'}
+    - Q
+    - '"'
+    - {t: '''', s: '"'}
+  - - R
+    - S
+    - N
+    - T
+    - B
+    - {t: ',', s: <}
+    - A
+    - E
+    - I
+    - H
+  - - X
+    - C
+    - L
+    - D
+    - G
     - {t: '-', s: _}
-  - [^, '#', (, ), $, _, '4', '5', '6', +]
-  - - {t: '&', s: '|'}
-    - <
-    - {t: '[', s: '{'}
-    - {t: ']', s: '}'}
-    - '>'
-    - {t: /, s: \}
-    - '1'
-    - '2'
-    - '3'
-    - {t: '=', s: +}
+    - U
+    - O
+    - Y
+    - K
   - - {t: ▽, type: trans}
-    - {type: held}
     - {t: ▽, type: trans}
-    - '0'
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  game:
+  - [↹, Q, W, E, R, '', '', '', '', '']
+  - [LEFT SHIFT, A, S, D, F, '', '', '', '', '']
+  - [⌃, '', M, I, '', '', '', '', '', '']
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
   nav:
-  - - {t: ▽, type: trans}
+  - ['', '', ↑, '', '', '', '', PG UP, '', '']
+  - ['', ←, ↓, →, '', '', HOME, PG DN, END, '']
+  - - {t: default, h: toggle}
+    - {t: handsdown_neu, h: toggle}
+    - {t: game, h: toggle}
+    - {t: nav, h: toggle}
+    - {t: media, h: toggle}
+    - {t: raise, h: toggle}
+    - {t: fun, h: toggle}
+    - {t: default, h: toggle}
+    - {t: default, h: toggle}
+    - {t: default, h: toggle}
+  - - ''
+    - ''
+    - {type: held}
+    - {type: held}
+    - ''
     - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - HOME
-    - END
-    - ↹
-    - {t: BACKSPACE, s: Alt+BACKSPACE}
-  - - {t: ⇧, h: sticky}
-    - {t: ⌃, h: sticky}
-    - {t: ⎇, h: sticky}
-    - {t: ⌘, h: sticky}
-    - ↹
-    - ←
-    - ↓
-    - ↑
-    - →
-    - {t: ESC, s: '`'}
-  - - {t: ▽, type: trans}
+  media:
+  - ['', 'VOL
+
+      MUTE', VOL UP, '', '', '', 'VOL
+
+      MUTE', VOL UP, '', '']
+  - ['', PREV, PLAY PAUSE, NEXT, '', '', PREV, PP, NEXT, '']
+  - ['', '', VOL DN, '', PRINTSCREEN, PRINTSCREEN, '', VOL DN, '', '']
+  - ['', '', '', '', '', '']
+  raise:
+  - ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
+  - - ↹
+    - {t: '[', s: '{'}
+    - '{'
+    - (
+    - <
+    - '>'
+    - )
+    - '}'
+    - {t: ']', s: '}'}
+    - {t: '''', s: '"'}
+  - [F1, F2, F3, F4, F5, F6, F7, F8, F9, F10]
+  - - F12
+    - BSPC
+    - {t: nav, type: held}
+    - nav
     - DEL
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - RET
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {type: held}
-    - {t: ▽, type: trans}
-  fun:
-  - - {t: ▽, type: trans}
-    - MUTE
-    - VOL DN
-    - VOL UP
-    - OUT TOG
-    - {t: ▽, type: trans}
-    - F7
-    - F8
-    - F9
-    - F12
-  - - {t: BT, h: '0'}
-    - {t: BT, h: '1'}
-    - {t: BT, h: '2'}
-    - {t: BT, h: '3'}
-    - {t: BT, h: '4'}
-    - {t: ▽, type: trans}
-    - F4
-    - F5
-    - F6
     - F11
-  - - BT CLR
-    - PREV
-    - PP
-    - NEXT
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - F1
-    - F2
-    - F3
-    - F10
-  - - {t: ▽, type: trans}
-    - {type: held}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {type: held}
-    - {t: ▽, type: trans}
+  fun:
+  - ['', '', BRI INC, BT NXT, OUT TOG, OUT TOG, BT NXT, BRI UP, '', '']
+  - ['', '', BRI DEC, '', '', '', '', BRI DEC, '', '']
+  - [EP TOG, '', '', '', '', '', '', '', '', EP TOG]
+  - ['&bootloader', '', '', '', '', '&bootloader']
+  empty:
+  - ['', '', '', '', '', '', '', '', '', '']
+  - ['', '', '', '', '', '', '', '', '', '']
+  - ['', '', '', '', '', '', '', '', '', '']
+  - ['', '', '', '', '', '']
+combos:
+- p: [34, 31]
+  k: ENTER
+- p: [1, 0]
+  k: ESC
+- p: [8, 7]
+  k: {t: '-', s: _}
+  l: [default, handsdown_neu, raise]
+- p: [9, 8]
+  k: {t: '=', s: +}
+  l: [default, handsdown_neu, raise]
+- p: [1, 2]
+  k: {t: '-', s: _}
+  l: [default, handsdown_neu, raise]
+- p: [0, 9]
+  k: {t: default, h: toggle}
+- p: [7, 18]
+  k: {t: '''', s: '"'}
+  l: [default, handsdown_neu, raise]
+- p: [8, 19]
+  k: '"'
+  l: [default, handsdown_neu, raise]
+- p: [5, 25]
+  k: '|'
+  l: [default, handsdown_neu, raise]
+- p: [2, 11]
+  k: {t: '''', s: '"'}
+  l: [default, handsdown_neu, raise]
+- p: [1, 10]
+  k: '"'
+  l: [default, handsdown_neu, raise]
+- p: [4, 24]
+  k: '|'
+  l: [default, handsdown_neu, raise]
+- p: [17, 26]
+  k: {t: /, s: '?'}
+  l: [default, handsdown_neu, raise]
+- p: [12, 21]
+  k: {t: /, s: '?'}
+  l: [handsdown_neu, default, raise]
+- p: [17, 28]
+  k: {t: \, s: '|'}
+  l: [default, handsdown_neu, raise]
+- p: [12, 23]
+  k: {t: \, s: '|'}
+  l: [default, handsdown_neu, raise]
+- p: [1, 12]
+  k: {t: '`', s: '~'}
+  l: [default, handsdown_neu, raise]
+- p: [6, 17]
+  k: {t: '`', s: '~'}
+  l: [default, handsdown_neu, raise]
+- p: [32, 33]
+  k: nav
+  l: [default, handsdown_neu]
+- p: [2, 22]
+  k: 'VOL
+
+    MUTE'
+  l: [media]
+- p: [7, 27]
+  k: 'VOL
+
+    MUTE'
+  l: [media]
+- p: [3, 6]
+  k: BT CLR
+  l: [fun]
