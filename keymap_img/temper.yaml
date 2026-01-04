@@ -68,7 +68,7 @@ layers:
   game:
   - [↹, Q, W, E, R, '', '', '', '', '']
   - [LEFT SHIFT, A, S, D, F, '', '', '', '', '']
-  - [⌃, '', M, I, '', '', '', '', '', '']
+  - [⌃, X, M, I, '', '', '', '', '', '']
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
