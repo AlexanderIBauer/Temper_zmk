@@ -95,11 +95,7 @@ layers:
     - ''
     - {t: ▽, type: trans}
   media:
-  - ['', 'VOL
-
-      MUTE', VOL UP, '', '', '', 'VOL
-
-      MUTE', VOL UP, '', '']
+  - ['', '', VOL UP, '', '', '', '', VOL UP, '', '']
   - ['', PREV, PLAY PAUSE, NEXT, '', '', PREV, PP, NEXT, '']
   - ['', '', VOL DN, '', PRINTSCREEN, PRINTSCREEN, '', VOL DN, '', '']
   - - {t: ▽, type: trans}
