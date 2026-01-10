@@ -231,3 +231,6 @@ combos:
 - p: [25, 26]
   k: Ctl+Y
   l: [default, handsdown_neu]
+- p: [30, 35]
+  k: {t: nav, h: toggle}
+  l: [default, handsdown_neu, game]
