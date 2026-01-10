@@ -22,7 +22,7 @@ layers:
     - {t: ',', s: <}
     - {t: ., s: '>'}
     - /
-  - ['&sf_tog 3', SPACE, raise, raise, SPACE, '&sf_tog 3']
+  - [nav, SPACE, raise, raise, SPACE, nav]
   handsdown_neu:
   - - W
     - F
