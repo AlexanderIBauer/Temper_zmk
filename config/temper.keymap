@@ -104,9 +104,9 @@
 
             #binding-cells = <2>;
             require-prior-idle-ms = <200>;
-            flavor = "tap-unless-interrupted";
-            tapping-term-ms = <1>;
-            quick-tap-ms = <100000>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <1000000>;
+            quick-tap-ms = <1000000>;
         };
 
         sf_kp: sf_kp {
@@ -116,8 +116,8 @@
 
             #binding-cells = <2>;
             require-prior-idle-ms = <200>;
-            flavor = "tap-unless-interrupted";
-            tapping-term-ms = <1>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <100000>;
             quick-tap-ms = <100000>;
         };
     };
@@ -345,6 +345,12 @@
             key-positions = <25 26>;
             require-prior-idle-ms = <100>;
             layers = <0 1>;
+        };
+
+        nav_back {
+            bindings = <&tog 3>;
+            key-positions = <30 35>;
+            layers = <0 1 2>;
         };
     };
 
