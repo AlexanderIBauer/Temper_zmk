@@ -22,7 +22,7 @@ layers:
     - {t: ',', s: <}
     - {t: ., s: '>'}
     - /
-  - ['&sf_tog 3', SPACE, raise, raise, SPACE, '&sf_tog 3']
+  - ['&sf_tog 3', SPACE, raise, raise, SPACE, '']
   handsdown_neu:
   - - W
     - F
@@ -233,4 +233,10 @@ combos:
   l: [default, handsdown_neu]
 - p: [30, 35]
   k: {t: nav, h: toggle}
+  l: [default, handsdown_neu, game]
+- p: [30, 31]
+  k: SPACE
+  l: [default, handsdown_neu, game]
+- p: [35, 34]
+  k: SPACE
   l: [default, handsdown_neu, game]
