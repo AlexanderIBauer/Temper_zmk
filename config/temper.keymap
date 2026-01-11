@@ -351,18 +351,18 @@
             layers = <0 1 2>;
         };
 
-        lf_safe_nav {
-            bindings = <&tog 3>;
-            key-positions = <30>;
+        lh_prevent_nav_space {
+            bindings = <&kp SPACE>;
+            key-positions = <30 31>;
             layers = <0 1 2>;
-            require-prior-idle-ms = <200>;
+            timeout-ms = <150>;
         };
 
-        rh_safe_nav {
-            bindings = <&tog 3>;
-            key-positions = <35>;
+        rh_prevent_nav_space {
+            bindings = <&kp SPACE>;
+            key-positions = <35 34>;
             layers = <0 1 2>;
-            require-prior-idle-ms = <200>;
+            timeout-ms = <150>;
         };
     };
 
