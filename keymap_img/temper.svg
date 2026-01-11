@@ -207,9 +207,10 @@ path {
 </g>
 <g transform="translate(188, 228)" class="key keypos-30">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
-<a href="#nav">
-<text x="0" y="0" class="key tap layer-activator">nav</text>
-</a></g>
+<text x="0" y="0" class="key tap">
+<tspan x="0" dy="-0.6em">&amp;sf_tog</tspan><tspan x="0" dy="1.2em">3</tspan>
+</text>
+</g>
 <g transform="translate(254, 236) rotate(15.0)" class="key keypos-31">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
 <text x="0" y="0" class="key tap">SPACE</text>
@@ -230,9 +231,10 @@ path {
 </g>
 <g transform="translate(599, 228)" class="key keypos-35">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
-<a href="#nav">
-<text x="0" y="0" class="key tap layer-activator">nav</text>
-</a></g>
+<text x="0" y="0" class="key tap">
+<tspan x="0" dy="-0.6em">&amp;sf_tog</tspan><tspan x="0" dy="1.2em">3</tspan>
+</text>
+</g>
 <g class="combo combopos-0">
 <path d="M394,236 l120,0" class="combo"/>
 <path d="M394,236 l-120,0" class="combo"/>
