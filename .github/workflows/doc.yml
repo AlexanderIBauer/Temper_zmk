@@ -1,26 +1,35 @@
 name: draw keymap
 
 on:
-  workflow_dispatch:  # can be triggered manually
-  push:               # automatically run on changes to following paths
+  workflow_dispatch:
+  push:
     paths:
       - ".github/workflows/doc.yml"
-      - "keymap_img/keymap_drawer.config.yaml"
-      - "config/*.keymap"
-      - "config/*.dtsi"
-#      - "boards/*/*/*.keymap"
-#      - "boards/*/*/*.dtsi"
+      - "docs/keymap/**/keymap_drawer.yaml"
+      - "config/**/*.keymap"
+      - "config/**/*.dtsi"
 
 jobs:
-  draw:
+  draw_temper:
     uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
     permissions:
-      contents: write  # allow workflow to commit to the repo
+      contents: write
     with:
-      commit_message: "doc: update keymap image"           # commit message for the changes
-#      keymap_patterns: "boards/*/*/*.keymap"               # path to the keymaps to parse
-      keymap_patterns: "config/*.keymap"               # path to the keymaps to parse
-      config_path: "keymap_img/keymap_drawer.config.yaml"  # config file, ignored if it does not exist
-      output_folder: "keymap_img"                          # path to save produced SVG and keymap YAML files
-      parse_args: "temper:'-c 10'"                         # map of extra args to pass to `keymap parse`, e.g. "corne:'-l Def Lwr Rse' cradio:''"
-      draw_args: "temper:'-k chocofi'"   # map of extra args to pass to `keymap draw`, e.g. "corne:'-k corne_rotated' cradio:'-k paroxysm'"
+      commit_message: "doc: updated keymap for temper"
+      keymap_patterns: "config/temper/*.keymap"
+      config_path: "docs/keymap/temper/keymap_drawer.yaml"  # config file, ignored if it does not exist
+      output_folder: "docs/keymap/temper"
+      parse_args: "temper:'-c 10'"                         # map of extra args to pass to `keymap parse`
+      draw_args: "temper:'-k chocofi'"   # map of extra args to pass to `keymap draw`
+
+  draw_charybdis:
+    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
+    permissions:
+      contents: write
+    with:
+      commit_message: "doc: updated keymap for charybdis"
+      keymap_patterns: "config/charybdis/*.keymap"
+      config_path: "docs/keymap/charybdis/keymap_drawer.yaml"
+      output_folder: "docs/keymap/charybdis"
+      parse_args: ""
+      draw_args: "charybdis:'-j config/charybdis/info.json -l five_column_transform'"

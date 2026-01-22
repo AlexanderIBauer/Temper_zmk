@@ -1,0 +1,232 @@
+combos {
+    compatible = "zmk,combos";
+
+    enter {
+        bindings = <&kp ENTER>;
+        key-positions = <34 31>;
+        timeout-ms = <30>;
+    };
+
+    escape {
+        bindings = <&kp ESC>;
+        key-positions = <1 0>;
+        timeout-ms = <75>;
+    };
+
+    rh-dash {
+        bindings = <&kp MINUS>;
+        key-positions = <8 7>;
+        require-prior-idle-ms = <50>;
+        layers = <0 1 5>;
+    };
+
+    equals {
+        bindings = <&kp EQUAL>;
+        key-positions = <9 8>;
+        timeout-ms = <75>;
+        layers = <0 1 5>;
+    };
+
+    lh-dash {
+        bindings = <&kp MINUS>;
+        key-positions = <1 2>;
+        require-prior-idle-ms = <50>;
+        layers = <0 1 5>;
+    };
+
+    reset_layers {
+        bindings = <&to 0>;
+        key-positions = <0 9>;
+        timeout-ms = <75>;
+    };
+
+    rh-apos {
+        bindings = <&kp APOS>;
+        key-positions = <7 18>;
+        require-prior-idle-ms = <50>;
+        layers = <0 1 5>;
+    };
+
+    rh-quote {
+        bindings = <&kp DOUBLE_QUOTES>;
+        key-positions = <8 19>;
+        require-prior-idle-ms = <50>;
+        layers = <0 1 5>;
+    };
+
+    rh-pipe {
+        bindings = <&kp PIPE>;
+        key-positions = <5 25>;
+        timeout-ms = <75>;
+        layers = <0 1 5>;
+    };
+
+    lh-apos {
+        bindings = <&kp APOS>;
+        key-positions = <2 11>;
+        require-prior-idle-ms = <50>;
+        layers = <0 1 5>;
+    };
+
+    lf-quote {
+        bindings = <&kp DOUBLE_QUOTES>;
+        key-positions = <1 10>;
+        require-prior-idle-ms = <50>;
+        layers = <0 1 5>;
+    };
+
+    lh-pipe {
+        bindings = <&kp PIPE>;
+        key-positions = <4 24>;
+        timeout-ms = <75>;
+        layers = <0 1 5>;
+    };
+
+    rh-forwardslash {
+        bindings = <&kp SLASH>;
+        key-positions = <17 26>;
+        timeout-ms = <75>;
+        layers = <0 1 5>;
+    };
+
+    lh-forwardslash {
+        bindings = <&kp SLASH>;
+        key-positions = <12 21>;
+        timeout-ms = <75>;
+        layers = <1 0 5>;
+    };
+
+    rh-backslash {
+        bindings = <&kp BACKSLASH>;
+        key-positions = <17 28>;
+        timeout-ms = <75>;
+        layers = <0 1 5>;
+    };
+
+    lh-backslash {
+        bindings = <&kp BACKSLASH>;
+        key-positions = <12 23>;
+        timeout-ms = <75>;
+        layers = <0 1 5>;
+    };
+
+    lh-grave {
+        bindings = <&kp GRAVE>;
+        key-positions = <1 12>;
+        require-prior-idle-ms = <50>;
+        layers = <0 1 5>;
+    };
+
+    rh-grave {
+        bindings = <&kp GRAVE>;
+        key-positions = <6 17>;
+        require-prior-idle-ms = <50>;
+        layers = <0 1 5>;
+    };
+
+    nav_jump {
+        bindings = <&mo 3>;
+        key-positions = <32 33>;
+        slow-release;
+        timeout-ms = <75>;
+        layers = <0 1>;
+    };
+
+    lh_mute {
+        bindings = <&kp C_MUTE>;
+        key-positions = <2 22>;
+        timeout-ms = <75>;
+        layers = <4>;
+    };
+
+    rh_mute {
+        bindings = <&kp C_MUTE>;
+        key-positions = <7 27>;
+        timeout-ms = <75>;
+        layers = <4>;
+    };
+
+    Clear_bt {
+        bindings = <&bt BT_CLR>;
+        key-positions = <3 6>;
+        require-prior-idle-ms = <150>;
+        layers = <6>;
+    };
+
+    lh_copy {
+        bindings = <&kp LC(C)>;
+        key-positions = <21 22>;
+        require-prior-idle-ms = <100>;
+        layers = <0 1>;
+    };
+
+    rh_copy {
+        bindings = <&kp LC(C)>;
+        key-positions = <27 28>;
+        require-prior-idle-ms = <100>;
+        layers = <0 1>;
+    };
+
+    lh_paste {
+        bindings = <&kp LC(V)>;
+        key-positions = <22 23>;
+        require-prior-idle-ms = <100>;
+        layers = <0 1>;
+    };
+
+    rh_paste {
+        bindings = <&kp LC(V)>;
+        key-positions = <27 26>;
+        require-prior-idle-ms = <100>;
+        layers = <0 1>;
+    };
+
+    lh_cut {
+        bindings = <&kp LC(X)>;
+        key-positions = <21 23>;
+        require-prior-idle-ms = <100>;
+        layers = <0 1>;
+    };
+
+    rh_cut {
+        bindings = <&kp LC(X)>;
+        key-positions = <26 28>;
+        require-prior-idle-ms = <100>;
+        layers = <0 1>;
+    };
+
+    lh_undo {
+        bindings = <&kp LC(Z)>;
+        key-positions = <20 21>;
+        require-prior-idle-ms = <100>;
+        layers = <0 1>;
+    };
+
+    rh_undo {
+        bindings = <&kp LC(Z)>;
+        key-positions = <28 29>;
+        require-prior-idle-ms = <100>;
+        layers = <0 1>;
+    };
+
+    lh_redo {
+        bindings = <&kp LC(Y)>;
+        key-positions = <24 23>;
+        require-prior-idle-ms = <100>;
+        layers = <0 1>;
+    };
+
+    rh_redo {
+        bindings = <&kp LC(Y)>;
+        key-positions = <25 26>;
+        require-prior-idle-ms = <100>;
+        layers = <0 1>;
+    };
+
+    lh_prevent_nav_space {
+        bindings = <&kp SPACE>;
+        key-positions = <30 31>;
+        layers = <0 1 2>;
+        timeout-ms = <150>;
+    };
+};
